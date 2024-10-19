@@ -1,0 +1,27 @@
+<?php require_once("templates/header.phtml");
+?>
+
+
+<div class ="form-container">
+    <form action = "autenticacion" method="POST" class="my-4">
+        <div class="row">
+            <div class="col-9">
+                <div class="form-group">
+                    <label>Nombre de usuario:</label>
+                    <input name="user_name";  type="text" class="form-control">
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-9">
+                <div class="form-group">
+                    <label>Contraseña:</label>
+                    <input name="password";  type="password" class="form-control">
+                </div>
+            </div>
+        </div>
+        
+
+        <button type="submit" class="btn btn-primary mt-2">Ingresar</button>
+    </form>
+</div>

@@ -1,0 +1,28 @@
+<?php require_once "templates/header.phtml" ?>
+
+<div class="form-container">
+    <form action="<?= BASE_URL ?>modificarAutor/<?= $autor->id_autor ?>" method="POST" class="my-4">
+        <div class="row">
+            <div class="col-9">
+                <div class="form-group">
+                    <label>Modificar nombre</label>
+                    <input name="nombre" type="text" class="form-control" value="<?= $autor->Nombre ?? '' ?>">
+                </div>
+            </div>
+            <div class="col-9">
+                <div class="form-group">
+                    <label>Modificar edad</label>
+                    <input name="edad" type="text" class="form-control" value="<?= $autor->Edad ?? '' ?>">
+                </div>
+            </div>
+            <div class="col-9">
+                <div class="form-group">
+                    <label>Modificar nacionalidad</label>
+                    <input name="nacionalidad" type="text" class="form-control" value="<?= $autor->Nacionalidad ?? '' ?>">
+                </div>
+            </div>
+        </div>
+
+        <button type="submit" class="btn btn-primary mt-2">Modificar</button>
+    </form>
+</div>

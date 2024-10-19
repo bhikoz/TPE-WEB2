@@ -1,0 +1,33 @@
+<?php require_once("templates/header.phtml") ?>
+<?php if($verify):?>
+    <?php require_once("templates/formLibro.phtml") ?>
+<?php endif ?>
+
+<div class="container-listado">
+    <table class="table table-dark">
+        <thead>
+            <tr>
+                <th>Título</th>
+                <th>Autor</th>
+                <th>Saga</th>
+                <th>Género</th>
+            </tr>
+        </thead>
+        <tbody>
+            <?php foreach ($libros as $libro): ?>
+                <tr>
+                    <td><a href="mostrarDetalleLibro/<?= $libro->id_libros ?>"><?= $libro->Titulo ?></a></td>
+                    <td><a href="mostrarLibroXAutores/<?= $libro->id_autor ?>"><?= $libro->autor_nombre ?></a></td>
+                    <td><?= $libro->Saga ?></td>
+                    <td><?= $libro->Genero ?></td>
+                    <?php if ($verify): ?>
+                        <td>
+                            <a href="eliminarLibro/<?= $libro->id_libros ?>" type='button' class='btn btn-danger'>Eliminar</a>
+                            <a href="formModificarLibro/<?= $libro->id_libros ?>" class="btn btn-success">Modificar</a>
+                        </td>
+                    <?php endif ?>
+                </tr>
+            <?php endforeach ?>
+        </tbody>
+    </table>
+</div>

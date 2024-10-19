@@ -1,0 +1,11 @@
+<?php require_once("templates/header.phtml") ?>
+
+<div class="container mt-4">
+    <div class="alert alert-danger" role="alert">
+        <h4 class="alert-heading">¡Error!</h4>
+        <p><?= isset($errorMessage) ? htmlspecialchars($errorMessage) : 'Ha ocurrido un error inesperado.'; ?></p> <!-- Usa htmlspecialchars para evitar inyecciones XSS -->
+        <hr>
+        <p class="mb-0"><a href="<?= BASE_URL ?>" class="btn btn-primary">Volver al inicio</a></p>
+    </div>
+</div>
+
